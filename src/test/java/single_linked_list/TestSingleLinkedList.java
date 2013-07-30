@@ -1,6 +1,8 @@
 package single_linked_list;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -30,6 +32,15 @@ public class TestSingleLinkedList {
         assertEquals(5,singleLinkedList.size());
         singleLinkedList.insertAfter(4,"Check");
         assertEquals(6,singleLinkedList.size());
+    }
+    @Rule public ExpectedException ex = ExpectedException.none();
+    @Test
+    public void testInsertAObjectIntoListWithLocateGreaterSizeOfList(){
+        for(int i = 0; i < 5; i++)
+            singleLinkedList.append("Test"+i);
+        assertEquals(5,singleLinkedList.size());
+        ex.expectMessage("Out of Size linked list");
+        singleLinkedList.insertAfter(6,"haka");
     }
 }
 
