@@ -24,13 +24,22 @@ public class SingleLinkedList {
             return false;
     }
 
-    public void add(Object test) {
-        head.setData(test);
+    public void append(Object test) {
+        Node temp = new Node(test);
+        Node currentNode = head;
+        while(currentNode.getNext()!= null){
+            currentNode = currentNode.getNext();
+        }
+        currentNode.setNext(temp);
         index++;
     }
 
     public Object last() {
-        return head.getData();
+        Node currentNode = head;
+        for(int i = 0; i < index; i++){
+            currentNode = currentNode.getNext();
+        }
+        return currentNode.getData();
     }
 
     private class Node {
@@ -42,8 +51,9 @@ public class SingleLinkedList {
             this.data = data;
         }
 
-        public Node(Object object) {
-
+        public Node(Object data) {
+            this.next = null;
+            this.data = data;
         }
 
         private Node getNext() {

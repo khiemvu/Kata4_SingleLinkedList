@@ -19,7 +19,7 @@ public class TestSingleLinkedList {
     }
     @Test
     public void testInsertAObjectIntoEmptySingleLinkedList(){
-        singleLinkedList.add("Test");
+        singleLinkedList.append("Test");
         assertEquals(1, singleLinkedList.size());
         assertEquals("Test", singleLinkedList.last());
     }
