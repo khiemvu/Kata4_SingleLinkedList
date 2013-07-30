@@ -10,7 +10,7 @@ public class SingleLinkedList {
     private static int index;
 
     SingleLinkedList(){
-        head = null;
+        head = new Node(null);
         index = 0;
     }
     public static int size() {
@@ -24,12 +24,13 @@ public class SingleLinkedList {
             return false;
     }
 
-    public void add(String test) {
-        //To change body of created methods use File | Settings | File Templates.
+    public void add(Object test) {
+        head.setData(test);
+        index++;
     }
 
     public Object last() {
-        return null;  //To change body of created methods use File | Settings | File Templates.
+        return head.getData();
     }
 
     private class Node {
@@ -39,6 +40,10 @@ public class SingleLinkedList {
         private Node(Node next, Object data) {
             this.next = next;
             this.data = data;
+        }
+
+        public Node(Object object) {
+
         }
 
         private Node getNext() {
