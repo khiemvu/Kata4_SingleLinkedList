@@ -42,6 +42,9 @@ public class SingleLinkedList {
         return currentNode.getData();
     }
 
+    public void insertAfter(int number, Object o) {
+    }
+
     private class Node {
         private Node next;
         private Object data;

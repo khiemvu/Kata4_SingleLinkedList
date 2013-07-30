@@ -23,5 +23,13 @@ public class TestSingleLinkedList {
         assertEquals(1, singleLinkedList.size());
         assertEquals("Test", singleLinkedList.last());
     }
+    @Test
+    public void testInsertAObjectIntoAfterNodeNInList(){
+        for(int i = 0; i < 5; i++)
+            singleLinkedList.append("Test"+i);
+        assertEquals(5,singleLinkedList.size());
+        singleLinkedList.insertAfter(4,"Check");
+        assertEquals(6,singleLinkedList.size());
+    }
 }
 
