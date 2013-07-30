@@ -39,7 +39,8 @@ public class TestSingleLinkedList {
         for(int i = 0; i < 5; i++)
             singleLinkedList.append("Test"+i);
         assertEquals(5,singleLinkedList.size());
-        ex.expectMessage("Out of Size linked list");
+        ex.expect(RuntimeException.class);
+        ex.expectMessage("Out of size linked list");
         singleLinkedList.insertAfter(6,"haka");
     }
 }
