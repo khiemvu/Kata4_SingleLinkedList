@@ -14,9 +14,15 @@ public class TestSingleLinkedList {
     @Test
     public void testCreateEmptySingleLinkedList(){
         SingleLinkedList singleLinkedList = new SingleLinkedList();
-        assertEquals(0, SingleLinkedList.size());
+        assertEquals(0, singleLinkedList.size());
         assertTrue(singleLinkedList.isEmpty());
     }
-
+    @Test
+    public void testInsertAObjectIntoEmptySingleLinkedList(){
+        SingleLinkedList singleLinkedList = new SingleLinkedList();
+        singleLinkedList.add("Test");
+        assertEquals(1, singleLinkedList.size());
+        assertEquals("Test", singleLinkedList.last());
+    }
 }
 

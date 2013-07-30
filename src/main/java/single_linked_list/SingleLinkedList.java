@@ -24,6 +24,14 @@ public class SingleLinkedList {
             return false;
     }
 
+    public void add(String test) {
+        //To change body of created methods use File | Settings | File Templates.
+    }
+
+    public Object last() {
+        return null;  //To change body of created methods use File | Settings | File Templates.
+    }
+
     private class Node {
         private Node next;
         private Object data;
