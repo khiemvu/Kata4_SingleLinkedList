@@ -64,5 +64,11 @@ public class TestSingleLinkedList {
         singleLinkedList.delete(3);
         assertEquals(4,singleLinkedList.size());
     }
+    @Test
+    public void testReceiverBeforeElementNInSingleLinkedList(){
+        initData();
+        Object check = singleLinkedList.before(4);
+        assertEquals("Test3",check);
+    }
 }
 
