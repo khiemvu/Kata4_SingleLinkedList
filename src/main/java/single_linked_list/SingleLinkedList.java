@@ -73,6 +73,10 @@ public class SingleLinkedList {
         return currentNode.getData();
     }
 
+    public Object after(int number) {
+        return null;
+    }
+
     private class Node {
         private Node next;
         private Object data;

@@ -71,5 +71,11 @@ public class TestSingleLinkedList {
         assertEquals("Test2",check);
         assertEquals("Test4", singleLinkedList.last());
     }
+    @Test
+    public void testReceiverAfterElementNInSingleLinkedList(){
+        initData();
+        Object check = singleLinkedList.after(3);
+        assertEquals("Test4",check);
+    }
 }
 
