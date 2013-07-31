@@ -67,8 +67,9 @@ public class TestSingleLinkedList {
     @Test
     public void testReceiverBeforeElementNInSingleLinkedList(){
         initData();
-        Object check = singleLinkedList.before(4);
-        assertEquals("Test3",check);
+        Object check = singleLinkedList.before(3);
+        assertEquals("Test2",check);
+        assertEquals("Test4", singleLinkedList.last());
     }
 }
 
