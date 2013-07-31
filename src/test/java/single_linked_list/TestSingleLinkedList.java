@@ -83,5 +83,13 @@ public class TestSingleLinkedList {
         Object check = singleLinkedList.find("Test2");
         assertEquals("Test2",check);
     }
+    @Test
+    public void testAddAObjectIntoLastOfSingleLinkedList(){
+        initData();
+        assertEquals(5,singleLinkedList.size());
+        singleLinkedList.append("kaka");
+        assertEquals(6, singleLinkedList.size());
+        assertEquals("kaka", singleLinkedList.last());
+    }
 }
 
