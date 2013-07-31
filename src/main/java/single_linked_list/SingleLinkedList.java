@@ -59,6 +59,11 @@ public class SingleLinkedList {
     }
 
     public void delete(int number) {
+        Node currentNode = head;
+        for(int i = 0; i < number; i++)
+            currentNode = currentNode.getNext();
+        currentNode.setNext(currentNode.getNext().getNext());
+        index--;
     }
 
     private class Node {
