@@ -54,6 +54,10 @@ public class SingleLinkedList {
         }
     }
 
+    public Object first() {
+        return null;
+    }
+
     private class Node {
         private Node next;
         private Object data;
