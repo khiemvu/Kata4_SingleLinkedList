@@ -80,6 +80,10 @@ public class SingleLinkedList {
         return currentNode.getData();
     }
 
+    public Object find(Object o) {
+        return null;
+    }
+
     private class Node {
         private Node next;
         private Object data;

@@ -77,5 +77,11 @@ public class TestSingleLinkedList {
         Object check = singleLinkedList.after(3);
         assertEquals("Test4",check);
     }
+    @Test
+    public void testFindAElementInSingleLinkedList(){
+        initData();
+        Object check = singleLinkedList.find("Test2");
+        assertEquals("Test2",check);
+    }
 }
 
