@@ -58,5 +58,11 @@ public class TestSingleLinkedList {
         assertEquals(5,singleLinkedList.size());
         assertEquals("Test0",singleLinkedList.first());
     }
+    @Test
+    public void testRemoveNodeNInSingleLinkedList(){
+        initData();
+        singleLinkedList.delete(3);
+        assertEquals(4,singleLinkedList.size());
+    }
 }
 

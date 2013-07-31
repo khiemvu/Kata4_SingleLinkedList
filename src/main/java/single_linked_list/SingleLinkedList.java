@@ -58,6 +58,9 @@ public class SingleLinkedList {
         return head.getNext().getData();
     }
 
+    public void delete(int number) {
+    }
+
     private class Node {
         private Node next;
         private Object data;
