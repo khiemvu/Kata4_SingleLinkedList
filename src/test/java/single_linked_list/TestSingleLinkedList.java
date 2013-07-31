@@ -55,7 +55,7 @@ public class TestSingleLinkedList {
         for(int i = 0; i < 5; i++)
             singleLinkedList.append("Test"+i);
         assertEquals(5,singleLinkedList.size());
-        assertEquals("Test1",singleLinkedList.first());
+        assertEquals("Test0",singleLinkedList.first());
     }
 }
 

@@ -55,7 +55,7 @@ public class SingleLinkedList {
     }
 
     public Object first() {
-        return null;
+        return head.getNext().getData();
     }
 
     private class Node {
