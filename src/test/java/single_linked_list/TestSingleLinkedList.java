@@ -91,5 +91,12 @@ public class TestSingleLinkedList {
         assertEquals(6, singleLinkedList.size());
         assertEquals("kaka", singleLinkedList.last());
     }
+    @Test
+    public void testAddAObjectIntoFirstOfSingleLinkedList(){
+        initData();
+        singleLinkedList.insertBefore("Check");
+        assertEquals(6, singleLinkedList.size());
+        assertEquals("Check", singleLinkedList.first());
+    }
 }
 

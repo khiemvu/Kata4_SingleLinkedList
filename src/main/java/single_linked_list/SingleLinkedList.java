@@ -92,6 +92,9 @@ public class SingleLinkedList {
         return currentNode.getData();
     }
 
+    public void insertBefore(Object o) {
+    }
+
     private class Node {
         private Node next;
         private Object data;
