@@ -81,7 +81,15 @@ public class SingleLinkedList {
     }
 
     public Object find(Object o) {
-        return null;
+        Node currentNode = head;
+        for(int i = 0; i < index; i++){
+            currentNode = currentNode.getNext();
+            if (currentNode.getData().equals(o))
+            {
+                break;
+            }
+        }
+        return currentNode.getData();
     }
 
     private class Node {
