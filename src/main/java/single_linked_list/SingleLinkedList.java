@@ -74,7 +74,10 @@ public class SingleLinkedList {
     }
 
     public Object after(int number) {
-        return null;
+        Node currentNode = head;
+        for(int i = 0; i <= number+1; i++)
+            currentNode = currentNode.getNext();
+        return currentNode.getData();
     }
 
     private class Node {
