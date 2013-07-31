@@ -14,6 +14,10 @@ import static org.junit.Assert.assertTrue;
  */
 public class TestSingleLinkedList {
     private SingleLinkedList singleLinkedList = new SingleLinkedList();
+    private void initData() {
+        for(int i = 0; i < 5; i++)
+            singleLinkedList.append("Test"+i);
+    }
     @Test
     public void testCreateEmptySingleLinkedList(){
         assertEquals(0, singleLinkedList.size());
@@ -27,8 +31,7 @@ public class TestSingleLinkedList {
     }
     @Test
     public void testInsertAObjectIntoAfterNodeNInList(){
-        for(int i = 0; i < 5; i++)
-            singleLinkedList.append("Test"+i);
+        initData();
         assertEquals(5,singleLinkedList.size());
         singleLinkedList.insertAfter(4,"Check");
         assertEquals(6,singleLinkedList.size());
@@ -36,8 +39,7 @@ public class TestSingleLinkedList {
     @Rule public ExpectedException ex = ExpectedException.none();
     @Test
     public void testInsertAObjectIntoListWithLocateGreaterSizeOfList(){
-        for(int i = 0; i < 5; i++)
-            singleLinkedList.append("Test"+i);
+        initData();
         assertEquals(5,singleLinkedList.size());
         ex.expect(RuntimeException.class);
         ex.expectMessage("Out of size linked list");
@@ -45,15 +47,14 @@ public class TestSingleLinkedList {
     }
     @Test
     public void testReturnElementLastOfSingleList(){
-        for(int i = 0; i < 5; i++)
-            singleLinkedList.append("Test"+i);
+        initData();
         assertEquals(5,singleLinkedList.size());
         assertEquals("Test4", singleLinkedList.last());
     }
+
     @Test
     public void testReturnElementFirstOfSingleList(){
-        for(int i = 0; i < 5; i++)
-            singleLinkedList.append("Test"+i);
+        initData();
         assertEquals(5,singleLinkedList.size());
         assertEquals("Test0",singleLinkedList.first());
     }
