@@ -43,5 +43,12 @@ public class TestSingleLinkedList {
         ex.expectMessage("Out of size linked list");
         singleLinkedList.insertAfter(6,"haka");
     }
+    @Test
+    public void testReturnElementLastOfSignleList(){
+        for(int i = 0; i < 5; i++)
+            singleLinkedList.append("Test"+i);
+        assertEquals(5,singleLinkedList.size());
+        assertEquals("Test4", singleLinkedList.last());
+    }
 }
 
